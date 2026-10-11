@@ -68,9 +68,10 @@ body {
 }
 
 .filter-item {
-    margin: 20px 20px 30px;
+    margin:0;
     filter: blur(1px);
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 .sidebar-items {
@@ -78,13 +79,13 @@ body {
     flex: 1;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 25px;
+    margin-top:30px;
     list-style: none;
     margin-top:20px;
 }
 
 .sidebar-items a {
-    margin: 0 20px;
+    margin:0 px;
     color: #3a4550;
     font-size: 17px;
     font-weight: 700;
