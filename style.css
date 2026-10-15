@@ -17,13 +17,10 @@ body {
     left: 0;
     display: flex;
     flex-direction: column;
-    color: ;
     width: 320px;
     height: 100vh;
-    padding: 23px 24px 35px;
-    margin: 20px;
     padding: 10px;
-    box-shadow:#d8d9df 10px 0 10px;
+    box-shadow:lch(86.78% 3.16 284.02) 10px 0 10px;
 }
 
 .main-header {
@@ -34,18 +31,33 @@ body {
 }
 
 .icon-btn {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-button,
+.footer-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
     cursor: pointer;
+}
+
+.icon-button:focus-visible,
+.footer-action:focus-visible {
+    outline: 2px solid #3a4550;
+    outline-offset: 3px;
+    border-radius: 50%;
 }
 
 .logo-btn {
     max-width: 120px;
     width: 80px;
     height: auto;
-    margin: 10px;
     cursor: pointer;
-    margin-right:100px;
 }
 
 .icon-btn,
@@ -53,8 +65,8 @@ body {
     transition: filter 180ms ease, opacity 180ms ease;
 }
 
-.icon-btn:hover,
-.footer-icon:hover {
+.icon-button:hover .icon-btn,
+.footer-action:hover .footer-icon {
     filter: brightness(0.8);
     opacity: 0.75;
 }
@@ -64,14 +76,18 @@ body {
     margin-bottom: 24px;
     padding: 10px;
     border-left: 1px solid turquoise;
+    color: #808080;
     font-size: 17px;
+    font-weight: 400;
 }
 
 .filter-item {
     margin:0;
-    filter: blur(1px);
     font-size: 16px;
     margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 1px 9px rgba(0, 0, 0, 0. 0);
+    border: 1px;
 }
 
 .sidebar-items {
@@ -81,28 +97,33 @@ body {
     gap: 30px;
     margin-top:30px;
     list-style: none;
-    margin-top:20px;
+
 }
 
 .sidebar-items a {
-    margin:0 px;
     color: #3a4550;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: none;
 }
 
 .footer-items {
     margin-top:50px;
+    overflow-y: auto;
 }
 
 .footer-icon {
     width: 40px;
     height: 40px;
+    object-fit: contain;
+}
+
+.footer-action {
+    width: 40px;
+    height: 40px;
     margin-right: 12px;
     margin-bottom: 20px;
-    cursor: pointer;
-    object-fit: contain;
+    text-decoration: none;
 }
 
 .footer-contacts {
@@ -113,25 +134,32 @@ body {
 .footer-email{
     display: block;
     margin-bottom: 20px;
-    font-family: TT lakee neue 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight:500 ;
     line-height: 24px;
     letter-spacing: -0.2px;
 
-}
-
-.footer-phone {
+}.footer-phone {
     display: block;
     margin-bottom: 20px;
-    font-size: 1px;
-}
-
-.footer-phone {
     font-size: 15px;
-    font-weight: bolder;
+    font-weight: bold;
+}
+.footer-lang {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+.footer-lang a {
+    color: #3a4550;
+    text-decoration: none;
+    transition: color 180ms ease;
 }
 
-.footer-lang {
-    display: block;
-    margin-bottom: 25px;
+.footer-lang .active-language {
+    color: #808080;
+}
+
+.footer-lang a:hover,
+.footer-lang a:focus-visible {
+    color: turquoise;
 }

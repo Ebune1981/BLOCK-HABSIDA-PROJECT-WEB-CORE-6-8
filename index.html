@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,33 +12,52 @@
 <body>
     <div class="container">
         <header class="main-header">
-            <img src="./icon-container.png" alt="" class="icon-btn">
+            <button type="button" class="icon-button" aria-label="Close menu">
+                <img src="./icon-container.png" alt="" class="icon-btn">
+            </button>
             <img src="./icon-group.png" alt="" class="logo-btn">
-            <img src="icon-search.png" alt="" class="icon-btn">
+            <button type="button" class="icon-button" aria-label="Search">
+                <img src="./icon-search.png" alt="" class="icon-btn">
+            </button>
         </header>
-        <div class="top-menu">Equipment repair</div>
-        <div class=" filter-item">Services and solutions</div>
-        <nav aria-label="Main navigation">
-            <ul class="sidebar-items">
-                <li><a href="#">Corperate clients</a></li>
-                <li><a href="#">Equipment sellers</a></li>
-                <li><a href="#">Manufacturers</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Our service centers</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </nav>
-     <div class="footer-items">
-        <img src="./icon-call.png" alt="" class="footer-icon">
-        <img src="icon-chat.png" alt="" class="footer-icon">
-        <img src="./icon-profile.svg" alt="" class="footer-icon">
-     <div class="footer-contacts">
-        <span class="footer-email">mail@cps.com</span>
-        <span class="footer-phone">8 800 890 8900</span>
-        <span class="footer-lang"> RU EN CH </span>
-
-   </div>
-</div>
+        <main>
+            <section aria-labelledby="equipment-repair-title">
+                <h1 id="equipment-repair-title" class="top-menu">Equipment repair</h1>
+                <section aria-labelledby="services-title">
+                    <h2 id="services-title" class="filter-item">Services and solutions</h2>
+                    <nav aria-label="Main navigation">
+                        <ul class="sidebar-items">
+                            <li><a href="#">Corperate clients</a></li>
+                            <li><a href="#">Equipment sellers</a></li>
+                            <li><a href="#">Manufacturers</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Our service centers</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+        </main>
+        <footer class="footer-items">
+            <a href="tel:88008908900" class="footer-action" aria-label="Call 8 800 890 8900">
+                <img src="./icon-call.png" alt="" class="footer-icon">
+            </a>
+            <button type="button" class="footer-action" aria-label="Chat">
+                <img src="./icon-chat.png" alt="" class="footer-icon">
+            </button>
+            <button type="button" class="footer-action" aria-label="Profile">
+                <img src="./icon-profile.svg" alt="" class="footer-icon">
+            </button>
+            <div class="footer-contacts">
+                <span class="footer-email">mail@cps.com</span>
+                <span class="footer-phone">8 800 890 8900</span>
+                <nav class="footer-lang" aria-label="Language">
+                    <a href="#" class="active-language" aria-current="true">RU</a>
+                    <a href="#">EN</a>
+                    <a href="#">CH</a>
+                </nav>
+            </div>
+        </footer>
     </div>
     
 </body>
